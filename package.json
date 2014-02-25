@@ -1,7 +1,7 @@
 {
   "name": "grunt-filenames",
   "description": "Validates filenames using given RegExp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",

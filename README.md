@@ -1,4 +1,4 @@
-# grunt-filenames v0.0.1
+# grunt-filenames v0.0.2
 
 > Validates filenames using given RegExp
 
@@ -18,6 +18,30 @@
 [grunt-filenames-devdependencies-url]: https://david-dm.org/bahmutov/grunt-filenames#info=devDependencies
 
 
+
+### Install
+
+`npm install grunt-filenames --save-dev`
+
+### Example
+
+Checks if all JavaScript filenames are lower case.
+
+```js
+// Gruntfile.js
+grunt.initConfig({
+  filenames: {
+    options: {
+      valid: /^[a-z]+\.js$/
+    },
+    src: ['tasks/*.js']
+  }
+});
+grunt.loadNpmTasks('grunt-filenames');
+grunt.registerTask('default', ['filenames']);
+```
+
+**note** grunt-filenames checks base name only (not folder names)
 
 ### Small print
 
