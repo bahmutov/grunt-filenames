@@ -1,0 +1,63 @@
+# grunt-filenames v0.0.1
+
+> Validates filenames using given RegExp
+
+[![NPM][grunt-filenames-icon] ][grunt-filenames-url]
+
+[![Build status][grunt-filenames-ci-image] ][grunt-filenames-ci-url]
+[![dependencies][grunt-filenames-dependencies-image] ][grunt-filenames-dependencies-url]
+[![devdependencies][grunt-filenames-devdependencies-image] ][grunt-filenames-devdependencies-url]
+
+[grunt-filenames-icon]: https://nodei.co/npm/grunt-filenames.png?downloads=true
+[grunt-filenames-url]: https://npmjs.org/package/grunt-filenames
+[grunt-filenames-ci-image]: https://travis-ci.org/bahmutov/grunt-filenames.png?branch=master
+[grunt-filenames-ci-url]: https://travis-ci.org/bahmutov/grunt-filenames
+[grunt-filenames-dependencies-image]: https://david-dm.org/bahmutov/grunt-filenames.png
+[grunt-filenames-dependencies-url]: https://david-dm.org/bahmutov/grunt-filenames
+[grunt-filenames-devdependencies-image]: https://david-dm.org/bahmutov/grunt-filenames/dev-status.png
+[grunt-filenames-devdependencies-url]: https://david-dm.org/bahmutov/grunt-filenames#info=devDependencies
+
+
+
+### Small print
+
+Author: Gleb Bahmutov &copy; 2014
+
+* [@bahmutov](https://twitter.com/bahmutov)
+* [glebbahmutov.com](http://glebbahmutov.com)
+* [blog](http://bahmutov.calepin.co/)
+
+License: MIT - do anything with the code, but don't blame me if it does not work.
+
+Spread the word: tweet, star on github, etc.
+
+Support: if you find any problems with this module, email / tweet /
+[open issue](https://github.com/bahmutov/grunt-filenames/issues) on Github
+
+
+
+## MIT License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Gleb Bahmutov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
