@@ -43,6 +43,15 @@ grunt.registerTask('default', ['filenames']);
 
 **note** grunt-filenames checks base name only (not folder names)
 
+### Extras
+
+Instead of RegExp, you can specify
+
+* `valid: "dashes"` - allow lowecase with dashes filenames
+
+
+
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2014
