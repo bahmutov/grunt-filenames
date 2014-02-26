@@ -22,8 +22,8 @@ grunt.registerTask('default', ['filenames']);
 
 Instead of RegExp, you can specify
 
-* `valid: "dashes"` - allow lowecase with dashes filenames
-* `valid: "camelCase"` - allow camelCasedFilenames.js
+* `valid: "dashes"` - allow lower-case-with-dashes filenames
+* `valid: "camelCase"` - allow camelCased filenames
 
 A function, for example
 
