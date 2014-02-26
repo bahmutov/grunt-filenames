@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     filenames: {
       options: {
-        valid: 'dashes'
+        valid: 'camelCase'
       },
       src: ['tasks/*.js']
     },

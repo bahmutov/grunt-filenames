@@ -1,4 +1,4 @@
-# grunt-filenames v0.0.2
+# grunt-filenames v0.0.3
 
 > Validates filenames using given RegExp
 
@@ -48,7 +48,7 @@ grunt.registerTask('default', ['filenames']);
 Instead of RegExp, you can specify
 
 * `valid: "dashes"` - allow lowecase with dashes filenames
-
+* `valid: "camelCase"` - allow camelCasedFilenames.js
 
 
 

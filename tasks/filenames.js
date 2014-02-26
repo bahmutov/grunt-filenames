@@ -12,14 +12,17 @@ var basename = require('path').basename;
 
 module.exports = function(grunt) {
   var dashed = /^[a-z\-]+\./;
+  var camelCase = /^[a-z][a-zA-Z]*\./;
 
   grunt.registerMultiTask('filenames', 'Validates source filenames', function () {
     var options = this.options({
-      valid: /^[a-z][a-zA-Z]+\./
+      valid: camelCase
     });
     if (options.valid === 'dashed' ||
       options.valid === 'dashes') {
       options.valid = dashed;
+    } else if (options.valid === 'camelCase') {
+      options.valid = camelCase;
     }
     grunt.verbose.writeln('Validating filenames using RegExp', options.valid);
 
