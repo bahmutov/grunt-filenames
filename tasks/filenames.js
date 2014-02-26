@@ -24,12 +24,22 @@ module.exports = function(grunt) {
     } else if (options.valid === 'camelCase') {
       options.valid = camelCase;
     }
-    grunt.verbose.writeln('Validating filenames using RegExp', options.valid);
+
+    var check;
+    if (typeof options.valid === 'function') {
+      grunt.verbose.writeln('Validating filenames using function\n' + options.valid.toString());
+      check = options.valid;
+    } else {
+      grunt.verbose.writeln('Validating filenames using RegExp', options.valid);
+      check = function (filename) {
+        return options.valid.test(filename);
+      };
+    }
 
     var allValid = this.files.every(function (file) {
       return file.src.every(function (filename) {
         grunt.verbose.writeln('testing filename', filename);
-        var valid = options.valid.test(basename(filename));
+        var valid = check(basename(filename));
         if (!valid) {
           grunt.log.error('file', filename, 'does not pass check', options.valid);
         }

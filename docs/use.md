@@ -24,3 +24,11 @@ Instead of RegExp, you can specify
 
 * `valid: "dashes"` - allow lowecase with dashes filenames
 * `valid: "camelCase"` - allow camelCasedFilenames.js
+
+A function, for example
+
+```js
+valid: function (filename) {
+  return filename.length > 10;
+}
+```
