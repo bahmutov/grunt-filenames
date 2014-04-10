@@ -12,13 +12,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-jshint-solid": "0.1.0",
-    "grunt-nice-package": "~0.2.1",
+    "grunt-nice-package": "^0.4.0",
     "grunt-readme": "~0.4.5",
     "jshint-stylish": "~0.1.5",
     "matchdep": "~0.3.0",
-    "pre-git": "0.0.14"
+    "pre-git": "0.0.15"
   },
   "engines": {
     "node": ">= 0.8.0"
