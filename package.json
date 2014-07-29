@@ -1,7 +1,7 @@
 {
   "name": "grunt-filenames",
   "description": "Validates filenames using given RegExp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -14,9 +14,9 @@
   "devDependencies": {
     "grunt-contrib-jshint": "0.10.0",
     "grunt-jshint-solid": "0.1.0",
-    "grunt-nice-package": "^0.9.1",
+    "grunt-nice-package": "0.9.1",
     "grunt-readme": "0.4.5",
-    "jshint-stylish": "^0.4.0",
+    "jshint-stylish": "0.4.0",
     "matchdep": "0.3.0",
     "pre-git": "0.0.16"
   },
