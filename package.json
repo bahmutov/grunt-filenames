@@ -12,12 +12,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-jshint": "0.10.0",
     "grunt-jshint-solid": "0.1.0",
-    "grunt-nice-package": "^0.4.0",
-    "grunt-readme": "~0.4.5",
-    "jshint-stylish": "~0.1.5",
-    "matchdep": "~0.3.0",
+    "grunt-nice-package": "0.4.0",
+    "grunt-readme": "0.4.5",
+    "jshint-stylish": "0.1.5",
+    "matchdep": "0.3.0",
     "pre-git": "0.0.15"
   },
   "engines": {
@@ -34,7 +34,7 @@
   "license": "MIT",
   "main": "Gruntfile.js",
   "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "0.4.5"
   },
   "pre-commit": "grunt",
   "repository": {
