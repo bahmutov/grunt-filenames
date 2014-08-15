@@ -47,7 +47,11 @@ module.exports = function(grunt) {
         grunt.verbose.writeln('testing filename', filename);
         var valid = check(basename(filename));
         if (!valid) {
-          grunt.log.error(options.error.replace(/{filename}/, filename, 'gi').replace(/{valid}/, options.valid.toString(), 'gi'));
+          grunt.log.error(
+			  options.error
+				  .replace(/{filename}/, filename, 'gi')
+				  .replace(/{valid}/, options.valid.toString(), 'gi')
+		  );
         }
         return valid;
       });
