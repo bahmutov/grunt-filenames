@@ -23,7 +23,9 @@ module.exports = function(grunt) {
       options.valid = dashed;
     } else if (options.valid === 'camelCase') {
       options.valid = camelCase;
-    }
+    } else if (typeof options.valid === 'string') {
+	  options.valid = new RegExp(options.valid);
+	}
 
     var check;
     if (typeof options.valid === 'function') {
@@ -36,12 +38,20 @@ module.exports = function(grunt) {
       };
     }
 
+	if (typeof options.error !== 'string') {
+		options.error = 'file {filename} does not pass check {valid}';
+	}
+
     var allValid = this.files.every(function (file) {
       return file.src.every(function (filename) {
         grunt.verbose.writeln('testing filename', filename);
         var valid = check(basename(filename));
         if (!valid) {
-          grunt.log.error('file', filename, 'does not pass check', options.valid);
+          grunt.log.error(
+			  options.error
+				  .replace(/{filename}/, filename, 'gi')
+				  .replace(/{valid}/, options.valid.toString(), 'gi')
+		  );
         }
         return valid;
       });
