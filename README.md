@@ -1,4 +1,4 @@
-# grunt-filenames v0.1.2
+# grunt-filenames v0.2.0
 
 > Validates filenames using given RegExp
 
@@ -42,6 +42,14 @@ grunt.registerTask('default', ['filenames']);
 ```
 
 **note** grunt-filenames checks base name only (not folder names)
+
+**Custom error message**
+
+Add the following property to the options to get custom error messages
+
+    error: 'your file {filename} does not come close to passing {valid}'
+    // {filename} - will be failed filename
+    // {valid} - will be options.valid regexp
 
 ### Extras
 
