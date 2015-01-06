@@ -24,8 +24,8 @@ module.exports = function(grunt) {
     } else if (options.valid === 'camelCase') {
       options.valid = camelCase;
     } else if (typeof options.valid === 'string') {
-	  options.valid = new RegExp(options.valid);
-	}
+      options.valid = new RegExp(options.valid);
+    }
 
     var check;
     if (typeof options.valid === 'function') {
@@ -38,9 +38,9 @@ module.exports = function(grunt) {
       };
     }
 
-	if (typeof options.error !== 'string') {
-		options.error = 'file {filename} does not pass check {valid}';
-	}
+    if (typeof options.error !== 'string') {
+      options.error = 'file {filename} does not pass check {valid}';
+    }
 
     var allValid = this.files.every(function (file) {
       return file.src.every(function (filename) {
@@ -48,14 +48,18 @@ module.exports = function(grunt) {
         var valid = check(basename(filename));
         if (!valid) {
           grunt.log.error(
-			  options.error
-				  .replace(/{filename}/, filename, 'gi')
-				  .replace(/{valid}/, options.valid.toString(), 'gi')
-		  );
+            options.error
+              .replace(/{filename}/, filename, 'gi')
+              .replace(/{valid}/, options.valid.toString(), 'gi')
+          );
         }
         return valid;
       });
     });
+
+    if (allValid) {
+      grunt.log.ok(this.files.length + ' file(s) without filename problems');
+    }
     return allValid;
   });
 };

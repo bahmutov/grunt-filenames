@@ -1,4 +1,4 @@
-# grunt-filenames v0.2.0
+# grunt-filenames v0.3.0
 
 > Validates filenames using given RegExp
 
