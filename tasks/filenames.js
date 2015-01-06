@@ -58,7 +58,10 @@ module.exports = function(grunt) {
     });
 
     if (allValid) {
-      grunt.log.ok(this.files.length + ' file(s) without filename problems');
+      var n = this.files.reduce(function (total, file) {
+        return total + file.src.length;
+      }, 0);
+      grunt.log.ok(n + ' file(s) without filename problems');
     }
     return allValid;
   });
