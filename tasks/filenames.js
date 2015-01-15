@@ -14,6 +14,24 @@ module.exports = function(grunt) {
   var dashed = /^[a-z\-]+\./;
   var camelCase = /^[a-z][a-zA-Z]*\./;
 
+  function getExceptions(options) {
+    var isException = function () {
+      return false;
+    };
+    if (typeof options.except === 'function') {
+      isException = options.except;
+    } else if (typeof options.except === 'string') {
+      isException = function (name) {
+        return name === options.except;
+      };
+    } else if (Array.isArray(options.except)) {
+      isException = function (name) {
+        return options.except.indexOf(name) !== -1;
+      };
+    }
+    return isException;
+  }
+
   grunt.registerMultiTask('filenames', 'Validates source filenames', function () {
     var options = this.options({
       valid: camelCase
@@ -42,16 +60,25 @@ module.exports = function(grunt) {
       options.error = 'file {filename} does not pass check {valid}';
     }
 
+    var isException = getExceptions(options);
+
     var allValid = this.files.every(function (file) {
       return file.src.every(function (filename) {
         grunt.verbose.writeln('testing filename', filename);
-        var valid = check(basename(filename));
+
+        var name = basename(filename);
+        var valid = check(name);
         if (!valid) {
-          grunt.log.error(
-            options.error
-              .replace(/{filename}/, filename, 'gi')
-              .replace(/{valid}/, options.valid.toString(), 'gi')
-          );
+          if (isException(name)) {
+            grunt.verbose.writeln('filename', filename, 'is an exception');
+            valid = true;
+          } else {
+            grunt.log.error(
+              options.error
+                .replace(/{filename}/, filename, 'gi')
+                .replace(/{valid}/, options.valid.toString(), 'gi')
+            );
+          }
         }
         return valid;
       });

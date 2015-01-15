@@ -27,7 +27,30 @@ module.exports = function(grunt) {
       options: {
         valid: 'dashes'
       },
-      src: ['tasks/*.js']
+      src: ['tasks/*.js'],
+
+      exceptString: {
+        options: {
+          except: 'fooBar.js'
+        },
+        src: ['test/*.js']
+      },
+
+      exceptArray: {
+        options: {
+          except: ['fooBar.js']
+        },
+        src: ['test/*.js']
+      },
+
+      exceptFn: {
+        options: {
+          except: function (name) {
+            return name === 'fooBar.js';
+          }
+        },
+        src: ['test/*.js']
+      }
     },
 
     readme: {

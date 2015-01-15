@@ -1,4 +1,4 @@
-# grunt-filenames v0.3.1
+# grunt-filenames v0.4.0
 
 > Validates filenames using given RegExp
 
@@ -32,7 +32,8 @@ Checks if all JavaScript filenames are lower case.
 grunt.initConfig({
   filenames: {
     options: {
-      valid: /^[a-z]+\.js$/
+      valid: /^[a-z]+\.js$/,
+      except: // 'name' | ['name1', 'name2'] | function (name) { return true if name is exception }
     },
     src: ['tasks/*.js']
   }
@@ -53,6 +54,8 @@ Add the following property to the options to get custom error messages
 
 ### Extras
 
+option **valid**
+
 Instead of RegExp, you can specify
 
 * `valid: "dashes"` - allow lower-case-with-dashes filenames
@@ -65,6 +68,11 @@ valid: function (filename) {
   return filename.length > 10;
 }
 ```
+
+option **except**
+
+You can exclude specific names if they fail the check. Single string name, array of strings or
+a function is allowed. A function should return truthy value if given name that fails should be an exception.
 
 
 
