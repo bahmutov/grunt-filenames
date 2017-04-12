@@ -8,7 +8,7 @@ node_js:
   - '7'
 before_script:
   - npm prune
-  - npm install -g grunt
+  - npm install grunt-cli
 after_success:
   - npm run semantic-release
 branches:
