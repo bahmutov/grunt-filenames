@@ -71,5 +71,5 @@ module.exports = function(grunt) {
   var plugins = require('matchdep').filterDev('grunt-*');
   plugins.forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('default', ['jshint', 'jshint-solid', 'nice-package', 'filenames', 'readme']);
+  grunt.registerTask('default', ['jshint', 'jshint-solid', 'nice-package', 'filenames']);
 };
