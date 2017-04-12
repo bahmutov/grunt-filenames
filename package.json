@@ -1,7 +1,7 @@
 {
   "name": "grunt-filenames",
   "description": "Validates filenames using given RegExp",
-  "version": "0.4.0",
+  "version": "0.0.0-development",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -19,7 +19,8 @@
     "grunt-readme": "0.4.5",
     "jshint-stylish": "1.0.0",
     "matchdep": "0.3.0",
-    "pre-git": "0.1.1"
+    "pre-git": "0.1.1",
+    "semantic-release": "^6.3.2"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -43,6 +44,7 @@
     "url": "https://github.com/bahmutov/grunt-filenames.git"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
