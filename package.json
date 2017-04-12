@@ -40,7 +40,7 @@
   "pre-commit": "grunt && npm version",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bahmutov/grunt-filenames.git"
+    "url": "https://github.com/bahmutov/grunt-filenames.git"
   },
   "scripts": {
     "test": "grunt"
