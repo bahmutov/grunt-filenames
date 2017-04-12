@@ -34,9 +34,6 @@
   ],
   "license": "MIT",
   "main": "Gruntfile.js",
-  "peerDependencies": {
-    "grunt-cli": ">=1.0.0"
-  },
   "pre-commit": "$(npm bin)/grunt",
   "repository": {
     "type": "git",
