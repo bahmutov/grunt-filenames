@@ -15,7 +15,7 @@
   "devDependencies": {
     "grunt-contrib-jshint": "1.1.0",
     "grunt-jshint-solid": "0.1.1",
-    "grunt-nice-package": "0.10.3",
+    "grunt-nice-package": "0.10.4",
     "jshint-stylish": "1.0.0",
     "matchdep": "1.0.1",
     "pre-git": "0.1.1",
