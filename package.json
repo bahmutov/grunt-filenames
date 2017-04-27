@@ -18,7 +18,7 @@
     "grunt-nice-package": "0.10.4",
     "jshint-stylish": "1.0.0",
     "matchdep": "1.0.1",
-    "pre-git": "0.1.1",
+    "pre-git": "3.14.0",
     "semantic-release": "6.3.2"
   },
   "engines": {
@@ -34,13 +34,25 @@
   ],
   "license": "MIT",
   "main": "Gruntfile.js",
-  "pre-commit": "$(npm bin)/grunt",
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": [
+        "grunt"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/grunt-filenames.git"
   },
   "scripts": {
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "grunt"
+    "test": "grunt",
+    "commit": "commit-wizard"
   }
 }
