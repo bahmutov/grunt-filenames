@@ -10,15 +10,28 @@
   "bugs": {
     "url": "https://github.com/bahmutov/grunt-filenames/issues"
   },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": [
+        "grunt"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
+  },
   "contributors": [],
   "dependencies": {},
   "devDependencies": {
+    "grunt": "1.0.1",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-jshint-solid": "0.1.1",
-    "grunt-nice-package": "0.10.3",
+    "grunt-nice-package": "0.10.4",
     "jshint-stylish": "1.0.0",
     "matchdep": "1.0.1",
-    "pre-git": "0.1.1",
+    "pre-git": "3.14.0",
     "semantic-release": "6.3.2"
   },
   "engines": {
@@ -34,12 +47,12 @@
   ],
   "license": "MIT",
   "main": "Gruntfile.js",
-  "pre-commit": "$(npm bin)/grunt",
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/grunt-filenames.git"
   },
   "scripts": {
+    "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "grunt"
   }
